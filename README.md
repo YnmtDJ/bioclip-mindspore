@@ -5,7 +5,7 @@
 数据集、预训练模型和BioCLIP模型的下载链接：[Dataset, Model](https://bhpan.buaa.edu.cn/link/AA0EC2E1AA4B9C4FCEBF5551E8C1245AB7)，提取码：wRN3
 
 ## 代码运行
-所有Python代码均在`src`目录下，运行前请确保已安装Mindspore和相关依赖。  
+所有Python代码均在`src`目录下，运行前请确保已安装Mindspore和相关依赖（ftfy, regex, numpy...）。  
 执行以下命令以运行代码，更多参数参考`params.py`：  
 ```bash
 python -m src.evaluation.zero_shot --gpu 0 --data_root /path_to_data --logs /path_to_logs --pretrained /path_to_model_ckpt/BIOCLIP.ckpt
