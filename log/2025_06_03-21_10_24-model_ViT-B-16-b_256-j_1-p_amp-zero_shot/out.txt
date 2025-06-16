@@ -1,0 +1,350 @@
+2025-06-03,21:10:29 | INFO | Model:
+2025-06-03,21:10:29 | INFO | CLIP(
+  (visual): VisionTransformer(
+    (conv1): Conv2d(input_channels=3, output_channels=768, kernel_size=(16, 16), stride=(16, 16), pad_mode=pad, padding=0, dilation=(1, 1), group=1, has_bias=False, weight_init=uniform, bias_init=uniform, format=NCHW)
+    (ln_pre): LayerNorm(normalized_shape=[768], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=visual.ln_pre.gamma, shape=(768,), dtype=Float32, requires_grad=True), beta=Parameter (name=visual.ln_pre.beta, shape=(768,), dtype=Float32, requires_grad=True))
+    (transformer): Transformer(
+      (resblocks): SequentialCell(
+        (0): ResidualAttentionBlock(
+          (attn): MultiheadAttention(
+            (out_proj): Dense(input_channels=768, output_channels=768, has_bias=True)
+          )
+          (ln_1): LayerNorm(normalized_shape=[768], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=visual.transformer.resblocks.0.ln_1.gamma, shape=(768,), dtype=Float32, requires_grad=True), beta=Parameter (name=visual.transformer.resblocks.0.ln_1.beta, shape=(768,), dtype=Float32, requires_grad=True))
+          (mlp): SequentialCell(
+            (c_fc): Dense(input_channels=768, output_channels=3072, has_bias=True)
+            (gelu): QuickGELU()
+            (c_proj): Dense(input_channels=3072, output_channels=768, has_bias=True)
+          )
+          (ln_2): LayerNorm(normalized_shape=[768], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=visual.transformer.resblocks.0.ln_2.gamma, shape=(768,), dtype=Float32, requires_grad=True), beta=Parameter (name=visual.transformer.resblocks.0.ln_2.beta, shape=(768,), dtype=Float32, requires_grad=True))
+        )
+        (1): ResidualAttentionBlock(
+          (attn): MultiheadAttention(
+            (out_proj): Dense(input_channels=768, output_channels=768, has_bias=True)
+          )
+          (ln_1): LayerNorm(normalized_shape=[768], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=visual.transformer.resblocks.1.ln_1.gamma, shape=(768,), dtype=Float32, requires_grad=True), beta=Parameter (name=visual.transformer.resblocks.1.ln_1.beta, shape=(768,), dtype=Float32, requires_grad=True))
+          (mlp): SequentialCell(
+            (c_fc): Dense(input_channels=768, output_channels=3072, has_bias=True)
+            (gelu): QuickGELU()
+            (c_proj): Dense(input_channels=3072, output_channels=768, has_bias=True)
+          )
+          (ln_2): LayerNorm(normalized_shape=[768], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=visual.transformer.resblocks.1.ln_2.gamma, shape=(768,), dtype=Float32, requires_grad=True), beta=Parameter (name=visual.transformer.resblocks.1.ln_2.beta, shape=(768,), dtype=Float32, requires_grad=True))
+        )
+        (2): ResidualAttentionBlock(
+          (attn): MultiheadAttention(
+            (out_proj): Dense(input_channels=768, output_channels=768, has_bias=True)
+          )
+          (ln_1): LayerNorm(normalized_shape=[768], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=visual.transformer.resblocks.2.ln_1.gamma, shape=(768,), dtype=Float32, requires_grad=True), beta=Parameter (name=visual.transformer.resblocks.2.ln_1.beta, shape=(768,), dtype=Float32, requires_grad=True))
+          (mlp): SequentialCell(
+            (c_fc): Dense(input_channels=768, output_channels=3072, has_bias=True)
+            (gelu): QuickGELU()
+            (c_proj): Dense(input_channels=3072, output_channels=768, has_bias=True)
+          )
+          (ln_2): LayerNorm(normalized_shape=[768], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=visual.transformer.resblocks.2.ln_2.gamma, shape=(768,), dtype=Float32, requires_grad=True), beta=Parameter (name=visual.transformer.resblocks.2.ln_2.beta, shape=(768,), dtype=Float32, requires_grad=True))
+        )
+        (3): ResidualAttentionBlock(
+          (attn): MultiheadAttention(
+            (out_proj): Dense(input_channels=768, output_channels=768, has_bias=True)
+          )
+          (ln_1): LayerNorm(normalized_shape=[768], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=visual.transformer.resblocks.3.ln_1.gamma, shape=(768,), dtype=Float32, requires_grad=True), beta=Parameter (name=visual.transformer.resblocks.3.ln_1.beta, shape=(768,), dtype=Float32, requires_grad=True))
+          (mlp): SequentialCell(
+            (c_fc): Dense(input_channels=768, output_channels=3072, has_bias=True)
+            (gelu): QuickGELU()
+            (c_proj): Dense(input_channels=3072, output_channels=768, has_bias=True)
+          )
+          (ln_2): LayerNorm(normalized_shape=[768], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=visual.transformer.resblocks.3.ln_2.gamma, shape=(768,), dtype=Float32, requires_grad=True), beta=Parameter (name=visual.transformer.resblocks.3.ln_2.beta, shape=(768,), dtype=Float32, requires_grad=True))
+        )
+        (4): ResidualAttentionBlock(
+          (attn): MultiheadAttention(
+            (out_proj): Dense(input_channels=768, output_channels=768, has_bias=True)
+          )
+          (ln_1): LayerNorm(normalized_shape=[768], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=visual.transformer.resblocks.4.ln_1.gamma, shape=(768,), dtype=Float32, requires_grad=True), beta=Parameter (name=visual.transformer.resblocks.4.ln_1.beta, shape=(768,), dtype=Float32, requires_grad=True))
+          (mlp): SequentialCell(
+            (c_fc): Dense(input_channels=768, output_channels=3072, has_bias=True)
+            (gelu): QuickGELU()
+            (c_proj): Dense(input_channels=3072, output_channels=768, has_bias=True)
+          )
+          (ln_2): LayerNorm(normalized_shape=[768], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=visual.transformer.resblocks.4.ln_2.gamma, shape=(768,), dtype=Float32, requires_grad=True), beta=Parameter (name=visual.transformer.resblocks.4.ln_2.beta, shape=(768,), dtype=Float32, requires_grad=True))
+        )
+        (5): ResidualAttentionBlock(
+          (attn): MultiheadAttention(
+            (out_proj): Dense(input_channels=768, output_channels=768, has_bias=True)
+          )
+          (ln_1): LayerNorm(normalized_shape=[768], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=visual.transformer.resblocks.5.ln_1.gamma, shape=(768,), dtype=Float32, requires_grad=True), beta=Parameter (name=visual.transformer.resblocks.5.ln_1.beta, shape=(768,), dtype=Float32, requires_grad=True))
+          (mlp): SequentialCell(
+            (c_fc): Dense(input_channels=768, output_channels=3072, has_bias=True)
+            (gelu): QuickGELU()
+            (c_proj): Dense(input_channels=3072, output_channels=768, has_bias=True)
+          )
+          (ln_2): LayerNorm(normalized_shape=[768], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=visual.transformer.resblocks.5.ln_2.gamma, shape=(768,), dtype=Float32, requires_grad=True), beta=Parameter (name=visual.transformer.resblocks.5.ln_2.beta, shape=(768,), dtype=Float32, requires_grad=True))
+        )
+        (6): ResidualAttentionBlock(
+          (attn): MultiheadAttention(
+            (out_proj): Dense(input_channels=768, output_channels=768, has_bias=True)
+          )
+          (ln_1): LayerNorm(normalized_shape=[768], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=visual.transformer.resblocks.6.ln_1.gamma, shape=(768,), dtype=Float32, requires_grad=True), beta=Parameter (name=visual.transformer.resblocks.6.ln_1.beta, shape=(768,), dtype=Float32, requires_grad=True))
+          (mlp): SequentialCell(
+            (c_fc): Dense(input_channels=768, output_channels=3072, has_bias=True)
+            (gelu): QuickGELU()
+            (c_proj): Dense(input_channels=3072, output_channels=768, has_bias=True)
+          )
+          (ln_2): LayerNorm(normalized_shape=[768], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=visual.transformer.resblocks.6.ln_2.gamma, shape=(768,), dtype=Float32, requires_grad=True), beta=Parameter (name=visual.transformer.resblocks.6.ln_2.beta, shape=(768,), dtype=Float32, requires_grad=True))
+        )
+        (7): ResidualAttentionBlock(
+          (attn): MultiheadAttention(
+            (out_proj): Dense(input_channels=768, output_channels=768, has_bias=True)
+          )
+          (ln_1): LayerNorm(normalized_shape=[768], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=visual.transformer.resblocks.7.ln_1.gamma, shape=(768,), dtype=Float32, requires_grad=True), beta=Parameter (name=visual.transformer.resblocks.7.ln_1.beta, shape=(768,), dtype=Float32, requires_grad=True))
+          (mlp): SequentialCell(
+            (c_fc): Dense(input_channels=768, output_channels=3072, has_bias=True)
+            (gelu): QuickGELU()
+            (c_proj): Dense(input_channels=3072, output_channels=768, has_bias=True)
+          )
+          (ln_2): LayerNorm(normalized_shape=[768], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=visual.transformer.resblocks.7.ln_2.gamma, shape=(768,), dtype=Float32, requires_grad=True), beta=Parameter (name=visual.transformer.resblocks.7.ln_2.beta, shape=(768,), dtype=Float32, requires_grad=True))
+        )
+        (8): ResidualAttentionBlock(
+          (attn): MultiheadAttention(
+            (out_proj): Dense(input_channels=768, output_channels=768, has_bias=True)
+          )
+          (ln_1): LayerNorm(normalized_shape=[768], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=visual.transformer.resblocks.8.ln_1.gamma, shape=(768,), dtype=Float32, requires_grad=True), beta=Parameter (name=visual.transformer.resblocks.8.ln_1.beta, shape=(768,), dtype=Float32, requires_grad=True))
+          (mlp): SequentialCell(
+            (c_fc): Dense(input_channels=768, output_channels=3072, has_bias=True)
+            (gelu): QuickGELU()
+            (c_proj): Dense(input_channels=3072, output_channels=768, has_bias=True)
+          )
+          (ln_2): LayerNorm(normalized_shape=[768], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=visual.transformer.resblocks.8.ln_2.gamma, shape=(768,), dtype=Float32, requires_grad=True), beta=Parameter (name=visual.transformer.resblocks.8.ln_2.beta, shape=(768,), dtype=Float32, requires_grad=True))
+        )
+        (9): ResidualAttentionBlock(
+          (attn): MultiheadAttention(
+            (out_proj): Dense(input_channels=768, output_channels=768, has_bias=True)
+          )
+          (ln_1): LayerNorm(normalized_shape=[768], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=visual.transformer.resblocks.9.ln_1.gamma, shape=(768,), dtype=Float32, requires_grad=True), beta=Parameter (name=visual.transformer.resblocks.9.ln_1.beta, shape=(768,), dtype=Float32, requires_grad=True))
+          (mlp): SequentialCell(
+            (c_fc): Dense(input_channels=768, output_channels=3072, has_bias=True)
+            (gelu): QuickGELU()
+            (c_proj): Dense(input_channels=3072, output_channels=768, has_bias=True)
+          )
+          (ln_2): LayerNorm(normalized_shape=[768], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=visual.transformer.resblocks.9.ln_2.gamma, shape=(768,), dtype=Float32, requires_grad=True), beta=Parameter (name=visual.transformer.resblocks.9.ln_2.beta, shape=(768,), dtype=Float32, requires_grad=True))
+        )
+        (10): ResidualAttentionBlock(
+          (attn): MultiheadAttention(
+            (out_proj): Dense(input_channels=768, output_channels=768, has_bias=True)
+          )
+          (ln_1): LayerNorm(normalized_shape=[768], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=visual.transformer.resblocks.10.ln_1.gamma, shape=(768,), dtype=Float32, requires_grad=True), beta=Parameter (name=visual.transformer.resblocks.10.ln_1.beta, shape=(768,), dtype=Float32, requires_grad=True))
+          (mlp): SequentialCell(
+            (c_fc): Dense(input_channels=768, output_channels=3072, has_bias=True)
+            (gelu): QuickGELU()
+            (c_proj): Dense(input_channels=3072, output_channels=768, has_bias=True)
+          )
+          (ln_2): LayerNorm(normalized_shape=[768], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=visual.transformer.resblocks.10.ln_2.gamma, shape=(768,), dtype=Float32, requires_grad=True), beta=Parameter (name=visual.transformer.resblocks.10.ln_2.beta, shape=(768,), dtype=Float32, requires_grad=True))
+        )
+        (11): ResidualAttentionBlock(
+          (attn): MultiheadAttention(
+            (out_proj): Dense(input_channels=768, output_channels=768, has_bias=True)
+          )
+          (ln_1): LayerNorm(normalized_shape=[768], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=visual.transformer.resblocks.11.ln_1.gamma, shape=(768,), dtype=Float32, requires_grad=True), beta=Parameter (name=visual.transformer.resblocks.11.ln_1.beta, shape=(768,), dtype=Float32, requires_grad=True))
+          (mlp): SequentialCell(
+            (c_fc): Dense(input_channels=768, output_channels=3072, has_bias=True)
+            (gelu): QuickGELU()
+            (c_proj): Dense(input_channels=3072, output_channels=768, has_bias=True)
+          )
+          (ln_2): LayerNorm(normalized_shape=[768], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=visual.transformer.resblocks.11.ln_2.gamma, shape=(768,), dtype=Float32, requires_grad=True), beta=Parameter (name=visual.transformer.resblocks.11.ln_2.beta, shape=(768,), dtype=Float32, requires_grad=True))
+        )
+      )
+    )
+    (ln_post): LayerNorm(normalized_shape=[768], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=visual.ln_post.gamma, shape=(768,), dtype=Float32, requires_grad=True), beta=Parameter (name=visual.ln_post.beta, shape=(768,), dtype=Float32, requires_grad=True))
+  )
+  (transformer): Transformer(
+    (resblocks): SequentialCell(
+      (0): ResidualAttentionBlock(
+        (attn): MultiheadAttention(
+          (out_proj): Dense(input_channels=512, output_channels=512, has_bias=True)
+        )
+        (ln_1): LayerNorm(normalized_shape=[512], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=transformer.resblocks.0.ln_1.gamma, shape=(512,), dtype=Float32, requires_grad=True), beta=Parameter (name=transformer.resblocks.0.ln_1.beta, shape=(512,), dtype=Float32, requires_grad=True))
+        (mlp): SequentialCell(
+          (c_fc): Dense(input_channels=512, output_channels=2048, has_bias=True)
+          (gelu): QuickGELU()
+          (c_proj): Dense(input_channels=2048, output_channels=512, has_bias=True)
+        )
+        (ln_2): LayerNorm(normalized_shape=[512], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=transformer.resblocks.0.ln_2.gamma, shape=(512,), dtype=Float32, requires_grad=True), beta=Parameter (name=transformer.resblocks.0.ln_2.beta, shape=(512,), dtype=Float32, requires_grad=True))
+      )
+      (1): ResidualAttentionBlock(
+        (attn): MultiheadAttention(
+          (out_proj): Dense(input_channels=512, output_channels=512, has_bias=True)
+        )
+        (ln_1): LayerNorm(normalized_shape=[512], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=transformer.resblocks.1.ln_1.gamma, shape=(512,), dtype=Float32, requires_grad=True), beta=Parameter (name=transformer.resblocks.1.ln_1.beta, shape=(512,), dtype=Float32, requires_grad=True))
+        (mlp): SequentialCell(
+          (c_fc): Dense(input_channels=512, output_channels=2048, has_bias=True)
+          (gelu): QuickGELU()
+          (c_proj): Dense(input_channels=2048, output_channels=512, has_bias=True)
+        )
+        (ln_2): LayerNorm(normalized_shape=[512], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=transformer.resblocks.1.ln_2.gamma, shape=(512,), dtype=Float32, requires_grad=True), beta=Parameter (name=transformer.resblocks.1.ln_2.beta, shape=(512,), dtype=Float32, requires_grad=True))
+      )
+      (2): ResidualAttentionBlock(
+        (attn): MultiheadAttention(
+          (out_proj): Dense(input_channels=512, output_channels=512, has_bias=True)
+        )
+        (ln_1): LayerNorm(normalized_shape=[512], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=transformer.resblocks.2.ln_1.gamma, shape=(512,), dtype=Float32, requires_grad=True), beta=Parameter (name=transformer.resblocks.2.ln_1.beta, shape=(512,), dtype=Float32, requires_grad=True))
+        (mlp): SequentialCell(
+          (c_fc): Dense(input_channels=512, output_channels=2048, has_bias=True)
+          (gelu): QuickGELU()
+          (c_proj): Dense(input_channels=2048, output_channels=512, has_bias=True)
+        )
+        (ln_2): LayerNorm(normalized_shape=[512], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=transformer.resblocks.2.ln_2.gamma, shape=(512,), dtype=Float32, requires_grad=True), beta=Parameter (name=transformer.resblocks.2.ln_2.beta, shape=(512,), dtype=Float32, requires_grad=True))
+      )
+      (3): ResidualAttentionBlock(
+        (attn): MultiheadAttention(
+          (out_proj): Dense(input_channels=512, output_channels=512, has_bias=True)
+        )
+        (ln_1): LayerNorm(normalized_shape=[512], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=transformer.resblocks.3.ln_1.gamma, shape=(512,), dtype=Float32, requires_grad=True), beta=Parameter (name=transformer.resblocks.3.ln_1.beta, shape=(512,), dtype=Float32, requires_grad=True))
+        (mlp): SequentialCell(
+          (c_fc): Dense(input_channels=512, output_channels=2048, has_bias=True)
+          (gelu): QuickGELU()
+          (c_proj): Dense(input_channels=2048, output_channels=512, has_bias=True)
+        )
+        (ln_2): LayerNorm(normalized_shape=[512], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=transformer.resblocks.3.ln_2.gamma, shape=(512,), dtype=Float32, requires_grad=True), beta=Parameter (name=transformer.resblocks.3.ln_2.beta, shape=(512,), dtype=Float32, requires_grad=True))
+      )
+      (4): ResidualAttentionBlock(
+        (attn): MultiheadAttention(
+          (out_proj): Dense(input_channels=512, output_channels=512, has_bias=True)
+        )
+        (ln_1): LayerNorm(normalized_shape=[512], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=transformer.resblocks.4.ln_1.gamma, shape=(512,), dtype=Float32, requires_grad=True), beta=Parameter (name=transformer.resblocks.4.ln_1.beta, shape=(512,), dtype=Float32, requires_grad=True))
+        (mlp): SequentialCell(
+          (c_fc): Dense(input_channels=512, output_channels=2048, has_bias=True)
+          (gelu): QuickGELU()
+          (c_proj): Dense(input_channels=2048, output_channels=512, has_bias=True)
+        )
+        (ln_2): LayerNorm(normalized_shape=[512], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=transformer.resblocks.4.ln_2.gamma, shape=(512,), dtype=Float32, requires_grad=True), beta=Parameter (name=transformer.resblocks.4.ln_2.beta, shape=(512,), dtype=Float32, requires_grad=True))
+      )
+      (5): ResidualAttentionBlock(
+        (attn): MultiheadAttention(
+          (out_proj): Dense(input_channels=512, output_channels=512, has_bias=True)
+        )
+        (ln_1): LayerNorm(normalized_shape=[512], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=transformer.resblocks.5.ln_1.gamma, shape=(512,), dtype=Float32, requires_grad=True), beta=Parameter (name=transformer.resblocks.5.ln_1.beta, shape=(512,), dtype=Float32, requires_grad=True))
+        (mlp): SequentialCell(
+          (c_fc): Dense(input_channels=512, output_channels=2048, has_bias=True)
+          (gelu): QuickGELU()
+          (c_proj): Dense(input_channels=2048, output_channels=512, has_bias=True)
+        )
+        (ln_2): LayerNorm(normalized_shape=[512], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=transformer.resblocks.5.ln_2.gamma, shape=(512,), dtype=Float32, requires_grad=True), beta=Parameter (name=transformer.resblocks.5.ln_2.beta, shape=(512,), dtype=Float32, requires_grad=True))
+      )
+      (6): ResidualAttentionBlock(
+        (attn): MultiheadAttention(
+          (out_proj): Dense(input_channels=512, output_channels=512, has_bias=True)
+        )
+        (ln_1): LayerNorm(normalized_shape=[512], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=transformer.resblocks.6.ln_1.gamma, shape=(512,), dtype=Float32, requires_grad=True), beta=Parameter (name=transformer.resblocks.6.ln_1.beta, shape=(512,), dtype=Float32, requires_grad=True))
+        (mlp): SequentialCell(
+          (c_fc): Dense(input_channels=512, output_channels=2048, has_bias=True)
+          (gelu): QuickGELU()
+          (c_proj): Dense(input_channels=2048, output_channels=512, has_bias=True)
+        )
+        (ln_2): LayerNorm(normalized_shape=[512], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=transformer.resblocks.6.ln_2.gamma, shape=(512,), dtype=Float32, requires_grad=True), beta=Parameter (name=transformer.resblocks.6.ln_2.beta, shape=(512,), dtype=Float32, requires_grad=True))
+      )
+      (7): ResidualAttentionBlock(
+        (attn): MultiheadAttention(
+          (out_proj): Dense(input_channels=512, output_channels=512, has_bias=True)
+        )
+        (ln_1): LayerNorm(normalized_shape=[512], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=transformer.resblocks.7.ln_1.gamma, shape=(512,), dtype=Float32, requires_grad=True), beta=Parameter (name=transformer.resblocks.7.ln_1.beta, shape=(512,), dtype=Float32, requires_grad=True))
+        (mlp): SequentialCell(
+          (c_fc): Dense(input_channels=512, output_channels=2048, has_bias=True)
+          (gelu): QuickGELU()
+          (c_proj): Dense(input_channels=2048, output_channels=512, has_bias=True)
+        )
+        (ln_2): LayerNorm(normalized_shape=[512], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=transformer.resblocks.7.ln_2.gamma, shape=(512,), dtype=Float32, requires_grad=True), beta=Parameter (name=transformer.resblocks.7.ln_2.beta, shape=(512,), dtype=Float32, requires_grad=True))
+      )
+      (8): ResidualAttentionBlock(
+        (attn): MultiheadAttention(
+          (out_proj): Dense(input_channels=512, output_channels=512, has_bias=True)
+        )
+        (ln_1): LayerNorm(normalized_shape=[512], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=transformer.resblocks.8.ln_1.gamma, shape=(512,), dtype=Float32, requires_grad=True), beta=Parameter (name=transformer.resblocks.8.ln_1.beta, shape=(512,), dtype=Float32, requires_grad=True))
+        (mlp): SequentialCell(
+          (c_fc): Dense(input_channels=512, output_channels=2048, has_bias=True)
+          (gelu): QuickGELU()
+          (c_proj): Dense(input_channels=2048, output_channels=512, has_bias=True)
+        )
+        (ln_2): LayerNorm(normalized_shape=[512], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=transformer.resblocks.8.ln_2.gamma, shape=(512,), dtype=Float32, requires_grad=True), beta=Parameter (name=transformer.resblocks.8.ln_2.beta, shape=(512,), dtype=Float32, requires_grad=True))
+      )
+      (9): ResidualAttentionBlock(
+        (attn): MultiheadAttention(
+          (out_proj): Dense(input_channels=512, output_channels=512, has_bias=True)
+        )
+        (ln_1): LayerNorm(normalized_shape=[512], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=transformer.resblocks.9.ln_1.gamma, shape=(512,), dtype=Float32, requires_grad=True), beta=Parameter (name=transformer.resblocks.9.ln_1.beta, shape=(512,), dtype=Float32, requires_grad=True))
+        (mlp): SequentialCell(
+          (c_fc): Dense(input_channels=512, output_channels=2048, has_bias=True)
+          (gelu): QuickGELU()
+          (c_proj): Dense(input_channels=2048, output_channels=512, has_bias=True)
+        )
+        (ln_2): LayerNorm(normalized_shape=[512], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=transformer.resblocks.9.ln_2.gamma, shape=(512,), dtype=Float32, requires_grad=True), beta=Parameter (name=transformer.resblocks.9.ln_2.beta, shape=(512,), dtype=Float32, requires_grad=True))
+      )
+      (10): ResidualAttentionBlock(
+        (attn): MultiheadAttention(
+          (out_proj): Dense(input_channels=512, output_channels=512, has_bias=True)
+        )
+        (ln_1): LayerNorm(normalized_shape=[512], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=transformer.resblocks.10.ln_1.gamma, shape=(512,), dtype=Float32, requires_grad=True), beta=Parameter (name=transformer.resblocks.10.ln_1.beta, shape=(512,), dtype=Float32, requires_grad=True))
+        (mlp): SequentialCell(
+          (c_fc): Dense(input_channels=512, output_channels=2048, has_bias=True)
+          (gelu): QuickGELU()
+          (c_proj): Dense(input_channels=2048, output_channels=512, has_bias=True)
+        )
+        (ln_2): LayerNorm(normalized_shape=[512], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=transformer.resblocks.10.ln_2.gamma, shape=(512,), dtype=Float32, requires_grad=True), beta=Parameter (name=transformer.resblocks.10.ln_2.beta, shape=(512,), dtype=Float32, requires_grad=True))
+      )
+      (11): ResidualAttentionBlock(
+        (attn): MultiheadAttention(
+          (out_proj): Dense(input_channels=512, output_channels=512, has_bias=True)
+        )
+        (ln_1): LayerNorm(normalized_shape=[512], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=transformer.resblocks.11.ln_1.gamma, shape=(512,), dtype=Float32, requires_grad=True), beta=Parameter (name=transformer.resblocks.11.ln_1.beta, shape=(512,), dtype=Float32, requires_grad=True))
+        (mlp): SequentialCell(
+          (c_fc): Dense(input_channels=512, output_channels=2048, has_bias=True)
+          (gelu): QuickGELU()
+          (c_proj): Dense(input_channels=2048, output_channels=512, has_bias=True)
+        )
+        (ln_2): LayerNorm(normalized_shape=[512], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=transformer.resblocks.11.ln_2.gamma, shape=(512,), dtype=Float32, requires_grad=True), beta=Parameter (name=transformer.resblocks.11.ln_2.beta, shape=(512,), dtype=Float32, requires_grad=True))
+      )
+    )
+  )
+  (token_embedding): Embedding(vocab_size=49408, embedding_size=512, use_one_hot=False, embedding_table=Parameter (name=token_embedding.embedding_table, shape=(49408, 512), dtype=Float32, requires_grad=True), dtype=Float32, padding_idx=None)
+  (ln_final): LayerNorm(normalized_shape=[512], begin_norm_axis=-1, begin_params_axis=-1, gammaParameter (name=ln_final.gamma, shape=(512,), dtype=Float32, requires_grad=True), beta=Parameter (name=ln_final.beta, shape=(512,), dtype=Float32, requires_grad=True))
+)
+2025-06-03,21:10:29 | INFO | Params:
+2025-06-03,21:10:29 | INFO |   aug_cfg: {}
+2025-06-03,21:10:29 | INFO |   batch_size: 256
+2025-06-03,21:10:29 | INFO |   data_root: /home/cti/hunan/project/python/bioclip-mindspore/data/plantnet_1k
+2025-06-03,21:10:29 | INFO |   debug: False
+2025-06-03,21:10:29 | INFO |   device: 0
+2025-06-03,21:10:29 | INFO |   distributed: False
+2025-06-03,21:10:29 | INFO |   force_custom_text: False
+2025-06-03,21:10:29 | INFO |   force_image_size: None
+2025-06-03,21:10:29 | INFO |   force_quick_gelu: False
+2025-06-03,21:10:29 | INFO |   gpu: 0
+2025-06-03,21:10:29 | INFO |   image_mean: None
+2025-06-03,21:10:29 | INFO |   image_std: None
+2025-06-03,21:10:29 | INFO |   kshot_list: [1, 5]
+2025-06-03,21:10:29 | INFO |   label_filename: metadata.csv
+2025-06-03,21:10:29 | INFO |   local_rank: 0
+2025-06-03,21:10:29 | INFO |   log_level: 20
+2025-06-03,21:10:29 | INFO |   log_path: /home/cti/hunan/project/python/bioclip-mindspore/log/2025_06_03-21_10_24-model_ViT-B-16-b_256-j_1-p_amp-zero_shot/out.log
+2025-06-03,21:10:29 | INFO |   logs: /home/cti/hunan/project/python/bioclip-mindspore/log
+2025-06-03,21:10:29 | INFO |   model: ViT-B-16
+2025-06-03,21:10:29 | INFO |   name: 2025_06_03-21_10_24-model_ViT-B-16-b_256-j_1-p_amp-zero_shot
+2025-06-03,21:10:29 | INFO |   nfold: 5
+2025-06-03,21:10:29 | INFO |   no_set_device_rank: False
+2025-06-03,21:10:29 | INFO |   precision: amp
+2025-06-03,21:10:29 | INFO |   pretrained: /home/cti/hunan/project/python/bioclip-mindspore/BIOCLIP.ckpt
+2025-06-03,21:10:29 | INFO |   pretrained_image: False
+2025-06-03,21:10:29 | INFO |   rank: 0
+2025-06-03,21:10:29 | INFO |   save_logs: True
+2025-06-03,21:10:29 | INFO |   seed: 0
+2025-06-03,21:10:29 | INFO |   task_type: all
+2025-06-03,21:10:29 | INFO |   text_type: asis
+2025-06-03,21:10:29 | INFO |   torchscript: False
+2025-06-03,21:10:29 | INFO |   trace: False
+2025-06-03,21:10:29 | INFO |   workers: 1
+2025-06-03,21:10:29 | INFO |   world_size: 1
+2025-06-03,21:10:29 | INFO | Starting zero-shot.
+2025-06-03,21:10:29 | INFO | Building zero-shot val-unseen classifier.
+2025-06-03,21:10:39 | INFO | Finished zero-shot val-unseen with total 25 classes.
+2025-06-03,21:10:39 | INFO | Finished zero-shot.
+2025-06-03,21:10:39 | INFO | Results:
+2025-06-03,21:10:39 | INFO |   val-unseen-top1: 94.80
+2025-06-03,21:10:39 | INFO |   val-unseen-top3: 99.10
+2025-06-03,21:10:39 | INFO |   val-unseen-top5: 99.50
+2025-06-03,21:10:39 | INFO | Done.
